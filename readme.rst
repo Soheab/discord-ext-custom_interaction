@@ -1,19 +1,28 @@
-# discord-ext-custom_interaction
+discord-ext-custom_interaction
+==============================
 An extension for discord.py that allows you to subclass `discord.Interaction` to add custom functionality.
 
-## Installation
+Installation
+------------
 
 .. code-block:: sh
+    :linenos:
+
     pip install discord-ext-custom_interaction
 
 Or from source:
 
 .. code-block:: sh
+    :linenos:
+
     pip install git+https://github.com/Soheab/discord-ext-custom_interaction
 
-## Basic example
+Basic example
+--------------
 
 .. code-block:: python
+    :linenos:
+
     import discord
     # import the extension
     from discord.ext import custom_interaction
@@ -44,10 +53,10 @@ Or from source:
     async def ping(interaction: CustomInteraction):
         await interaction.respond("Pong!")
 
-
     ... # same stuff
 
-## Pre-built custom interactions
+Pre-built custom interactions
+-----------------------------
 There are two pre-built custom interactions that you can use:
 
 - `custom_interaction.CustomInteraction` - A custom interaction that has a `send` method and the following properties: `author`, `voice_client`.
