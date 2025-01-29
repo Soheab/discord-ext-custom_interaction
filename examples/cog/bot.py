@@ -5,7 +5,7 @@ from typing import Any
 import discord
 
 # import the extension
-from discord.ext.custom_interactions import InteractionBot
+from discord.ext.custom_interaction import InteractionBot
 
 
 # define a custom interaction class

@@ -5,7 +5,7 @@ from typing import Any
 import discord
 
 # import the extension
-from discord.ext.custom_interactions import InteractionClient, InteractionTree
+from discord.ext.custom_interaction import InteractionClient, InteractionTree
 
 
 # define a custom interaction class

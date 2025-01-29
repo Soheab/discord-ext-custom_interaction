@@ -11,7 +11,7 @@ from discord.ext import commands
 # I recommend doing it at type-checking only
 # but it'll work at runtime as well, it literally calls the original decorator.
 if TYPE_CHECKING:
-    from discord.ext.custom_interactions import command
+    from discord.ext.custom_interaction import command
 
     # import our CustomInteraction class too, only for type-checking
     from .bot import CustomInteraction

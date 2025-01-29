@@ -4,16 +4,49 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "discord-ext-custom_interaction"
-description = "A Python ext"
 requires-python = ">= 3.10"
-version = "0.0.1"
 dependencies = ["aiohttp>=3.11,<4", "discord.py>=2.4.0,<3"]
+description = "An extension for discord.py that allows you to subclass `discord.Interaction` to add custom functionality."
+dynamic = ["version"]
+readme = { file = "README.txt", content-type = "text/x-rst" }
+license = { file = "LICENSE" }
+keywords = [
+    "discord.py",
+    "dpy",
+    "discord",
+    "extension",
+    "discord.ext",
+    "interactions",
+    "custom",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Typing :: Typed",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "discord.ext.custom_interaction.__version__" }
 
 [project.optional-dependencies]
-dev = ["typing_extensions>=4.12.2,<5"]
+dev = ["typing_extensions>=4.12.2,<5", "ruff>=0.9.3,<10"]
 
+[tool.setuptools]
+packages = ["discord", "discord.ext", "discord.ext.custom_interaction"]
+
+[project.urls]
+homepage = "https://github.com/Soheab/discord-ext-custom_interaction"
+repository = "https://github.com/Soheab/discord-ext-custom_interaction"
 
 [tool.pyright]
+include = ["discord", "discord.ext", "discord.ext.custom_interaction"]
+exclude = ["**/__pycache__", "_build", "build", "dist"]
 pythonVersion = "3.10"
 typeCheckingMode = "strict"
 
@@ -26,6 +59,8 @@ reportUnnecessaryIsInstance = false # idc
 [tool.ruff]
 line-length = 125
 target-version = "py310"
+include = ["discord", "discord.ext", "discord.ext.custom_interaction"]
+exclude = ["**/__pycache__", "_build", "build", "dist", "examples"]
 
 [tool.ruff.lint]
 preview = true

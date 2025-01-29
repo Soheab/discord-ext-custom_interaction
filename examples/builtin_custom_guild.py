@@ -3,7 +3,7 @@ import discord
 
 # import the extension
 # and the builtin custom interaction class
-from discord.ext.custom_interactions import InteractionBot, CustomGuildInteraction
+from discord.ext.custom_interaction import InteractionBot, CustomGuildInteraction
 
 
 # before
