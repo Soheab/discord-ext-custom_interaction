@@ -7,8 +7,7 @@ name = "discord-ext-custom_interaction"
 requires-python = ">= 3.10"
 dependencies = ["aiohttp>=3.11,<4", "discord.py>=2.4.0,<3"]
 description = "An extension for discord.py that allows you to subclass `discord.Interaction` to add custom functionality."
-dynamic = ["version"]
-readme = { file = "README.txt", content-type = "text/x-rst" }
+dynamic = ["version", "readme"]
 license = { file = "LICENSE" }
 keywords = [
     "discord.py",
@@ -33,6 +32,7 @@ classifiers = [
 
 [tool.setuptools.dynamic]
 version = { attr = "discord.ext.custom_interaction.__version__" }
+readme = { file = "readme.rst", content-type = "text/x-rst" }
 
 [project.optional-dependencies]
 dev = ["typing_extensions>=4.12.2,<5", "ruff>=0.9.3,<10"]
